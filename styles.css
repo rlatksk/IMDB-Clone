@@ -74,3 +74,8 @@ body{
     margin-left: 20px;
     color: darkgray;
 }
+
+.movie-card a {
+    text-decoration: none;
+    color: lightgray;
+}
