@@ -55,11 +55,18 @@ function displayMovies(movies) {
 }
 
 function handleSearchFormSubmit(event) {
-  categoryTitle.innerHTML = "Search Results";
   event.preventDefault();
-  const searchQuery = searchInput.value;
-  const movies = searchMovies(searchQuery);
-  displayMovies(movies);
+  const searchQuery = searchInput.value.trim();
+  const searchWarning = document.getElementById("search-warning");
+
+  if (searchQuery) { 
+    categoryTitle.innerHTML = "Search Results";
+    searchWarning.textContent = ""; 
+    const movies = searchMovies(searchQuery);
+    displayMovies(movies);
+  } else {
+    searchWarning.textContent = "Please enter a valid search value.";
+  }
 }
 
 async function getIMDbId(movieId) {

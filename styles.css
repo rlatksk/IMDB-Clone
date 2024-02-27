@@ -33,6 +33,7 @@
   margin-left: 20vw;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 #search-bar h1 {
@@ -48,6 +49,8 @@
   height: 30px;
   width: 700px;
   border-radius: 5px;
+  border: 1px solid #ccc; 
+  padding: 5px; 
 }
 
 body {
@@ -78,4 +81,15 @@ body {
 .movie-card a {
   text-decoration: none;
   color: lightgray;
+}
+
+#search-warning {
+  margin-left: 140px;
+  color: red;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  width: 100%;
 }
