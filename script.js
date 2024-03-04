@@ -6,6 +6,13 @@ const moviesGrid = document.getElementById("movies-grid");
 const searchInput = document.getElementById("search-input");
 const searchForm = document.getElementById("search-form");
 const categoryTitle = document.getElementById("category-title");
+const imdbCloneTitle = document.getElementById("imdb-clone-title");
+
+imdbCloneTitle.addEventListener("click", () => {
+  categoryTitle.innerHTML = "Now Playing";
+  fetchMoviesNowPlaying();
+  searchInput.value = "";
+});
 
 async function fetchMoviesNowPlaying() {
   const response = await fetch(
