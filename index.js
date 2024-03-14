@@ -8,7 +8,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {    
-    res.render("index.ejs", { title: "homepage"})
+    res.render("index", { title: "homepage"})
 });
 
 app.listen(port, () => {
